@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --moveX: 10deg;
+  --moveY: 10deg;
+}
+.layers {
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.layers-container {
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--moveX)) rotateY(var(--moveY));
+  will-change: transform;
+}
+
+.layer-item {
+  position: absolute;
+  inset: -5vw;
+  background-size: cover;
+  background-position: center;
+}
+.item-1 {
+  transform: translateZ(-100px);
+}
+.item-2 {
+  transform: translateZ(100px);
+}
+.item-3 {
+  transform: translateZ(150px);
+}
+.item-4 {
+  transform: translateZ(200px);
+}
+.item-5 {
+  transform: translateZ(300px);
+}
+.item-6 {
+  transform: translateZ(350px);
+}
